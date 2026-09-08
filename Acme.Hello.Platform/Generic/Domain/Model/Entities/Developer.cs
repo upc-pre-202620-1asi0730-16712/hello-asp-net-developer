@@ -14,7 +14,7 @@ public class Developer
         LastName = string.IsNullOrWhiteSpace(lastName) ? "" : lastName;
     }
     
-    public string GetFullName => $"{FirstName} {LastName}";
+    public string GetFullName() => $"{FirstName} {LastName}".Trim();
     
-    public bool IsAnyNameEmpty => string.IsNullOrWhiteSpace(FirstName) || string.IsNullOrWhiteSpace(LastName);
+    public bool IsAnyNameEmpty() => string.IsNullOrWhiteSpace(FirstName) || string.IsNullOrWhiteSpace(LastName);
 }
